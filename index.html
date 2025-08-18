@@ -1,4 +1,4 @@
-CTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@ CTYPE html>
 
   <!-- Top Navbar -->
   <div class="top-nav">
-    <div class="logo">🧠Naveen||||| Genesis</div>
+    <a href="index.html" class="logo">🧠DBA | Genesis</a>
     <div class="nav-links">
       <a href="#">Linux</a>
       <a href="#">Oracle Database</a>
@@ -29,7 +29,7 @@ CTYPE html>
     <div class="section">
       <h3 onclick="toggleSection(this)">Administration ▼</h3>
       <ul>
-        <li>Connect Linux Using SSH Key</li>
+        <li>Connect Linux </li>
         <li>Linux loops</li>
         <li>Linux functions</li>
         <li>Linux if-then-else</li>
@@ -54,14 +54,14 @@ CTYPE html>
     <div class="section">
       <h3 onclick="toggleSection(this)">Miscellaneous ▼</h3>
       <ul>
-        <li>Shell Scripts</li>
+        <li><a href="#" onclick="loadShellScript()">Shell Scripts</a></li>
         <li>Useful tools</li>
       </ul>
     </div>
   </div>
 
   <!-- Main Content -->
-  <div class="main-content">
+  <div class="main-content" id="main-content">
     <h1>Linux Docs</h1>
     <p>Setup Linux machines, connect remotely and automate via shell scripts.</p>
 
@@ -95,7 +95,70 @@ CTYPE html>
   </div>
 
   <script src="script.js"></script>
+
+<script>
+  function loadShellScript() {
+    const content = `
+      <h1>Shell Scripting Tutorial</h1>
+
+      <p>A shell script is a computer program designed to be run by the Unix/Linux shell which could be one of the following:</p>
+
+      <ul>
+        <li>The Bourne Shell</li>
+        <li>The C Shell</li>
+        <li>The Korn Shell</li>
+        <li>The GNU Bourne-Again Shell</li>
+      </ul>
+
+      <p>A shell is a command-line interpreter and typical operations performed by shell scripts include file manipulation, program execution, and printing text.</p>
+
+      <h2>Extended Shell Scripts</h2>
+
+      <p>Shell scripts have several required constructs that tell the shell environment what to do and when to do it.</p>
+
+      <p>The shell is, after all, a real programming language, complete with variables, control structures, and so forth.</p>
+
+      <h3>Example Script:</h3>
+      <h3>Example Script:</h3>
+
+      <img src="https://github.com/Navi126/project1/blob/main/test.png?raw=true" alt="Shell Script Example" style="max-width:100%; height:auto; border:1px solid #ccc; margin: 15px 0;" />
+      <pre><code>
+#!/bin/sh
+
+# Author : Zara Ali
+# Copyright (c) Tutorialspoint.com
+# Script follows here:
+
+echo "What is your name?"
+read PERSON
+echo "Hello, $PERSON"
+      </code></pre>
+
+      <p><strong>Sample Output:</strong></p>
+      <pre>
+$ ./test.sh
+What is your name?
+=====
+
+
+
+
+
+
+
+
+
+
+=====
+Zara Ali
+Hello, Zara Ali
+$</pre>
+
+      <p>Subsequent part of this tutorial will cover Unix/Linux Shell Scripting in detail.</p>
+    `;
+
+    document.getElementById("main-content").innerHTML = content;
+  }
+</script>
 </body>
 </html>
-
-
