@@ -1,29 +1,20 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body and layout */
+.logo {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
   font-family: Arial, sans-serif;
   display: flex;
   min-height: 100vh;
-  flex-direction: row;
-  padding-top: 60px; /* To prevent content under fixed top nav */
-  padding-bottom: 40px; /* To prevent content under fixed footer */
 }
 
-/* Logo */
-.logo {
-  text-decoration: none;
-  color: inherit;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-/* Top Navigation */
 .top-nav {
   position: fixed;
   top: 0;
@@ -50,7 +41,11 @@ body {
   color: orange;
 }
 
-/* Search Box */
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
 .search-box {
   background-color: #333;
   border-radius: 6px;
@@ -64,14 +59,13 @@ body {
   outline: none;
 }
 
-/* Sidebar */
 .sidebar {
   width: 250px;
   background-color: #f6f9ff;
-  padding: 20px 15px 20px;
+  padding: 80px 15px 20px;
   position: fixed;
-  top: 60px; /* below fixed top-nav */
-  bottom: 40px; /* above fixed footer */
+  top: 0;
+  bottom: 0;
   overflow-y: auto;
 }
 
@@ -114,12 +108,10 @@ body {
   text-decoration: underline;
 }
 
-/* Main content */
 .main-content {
   margin-left: 270px;
-  padding: 20px 30px 30px;
+  padding: 80px 30px 30px;
   flex: 1;
-  min-height: calc(100vh - 100px); /* account for top and footer */
 }
 
 .main-content h1 {
@@ -133,7 +125,6 @@ body {
   color: #444;
 }
 
-/* Articles grid */
 .articles-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -176,4 +167,18 @@ pre {
   padding: 10px;
   border-left: 4px solid #007BFF;
   overflow-x: auto;
-  font-family: monospace
+  font-family: monospace;
+}
+
+.nav-buttons {
+  margin: 15px 0;
+}
+
+.nav-buttons a {
+  margin-right: 10px;
+  background-color: #007BFF;
+  color: white;
+  padding: 6px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+}
