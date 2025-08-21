@@ -51,6 +51,14 @@
         <li>OEL 7.9 on VirtualBox</li>
       </ul>
     </div>
+  
+    <div class="section">
+      <h3 onclick="toggleSection(this)">DOCKER ▼</h3>
+      <ul>
+        <li><a href="#" onclick="loadDocker()">Docker container</a></li>
+      </ul>
+    </div>
+
 
     <div class="section">
       <h3 onclick="toggleSection(this)">Miscellaneous ▼</h3>
@@ -67,7 +75,8 @@
     <p>Setup Linux machines, connect remotely and automate via shell scripts.</p>
 
     <h2>Latest articles</h2>
-    <div class="articles-grid">
+=======================================================================================================================================================
+    <div class="articles-grid">        
       <div class="card">
         <img src="https://tse3.mm.bing.net/th/id/OIP.OvWu4PP_VjTlEYDxXdHbHwHaFj?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Firewall" />
         <a href="#" class="card-title">Linux Firewall with iptables and firewalld</a>
@@ -92,7 +101,13 @@
         <img src="https://tse4.mm.bing.net/th/id/OIP.dW-OEZbT_r0NQ93xTTESGwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Check" />
         <a href="#" class="card-title">Shell Script to Check File or Directory</a>
       </div>
+      <div class="card">
+        <a href="#" onclick="loadDocker()">
+        <img src="https://th.bing.com/th/id/R.b3e6202f5356edebd8c8205623eef0f1?rik=GCcs8EX4KgLm1g&pid=ImgRaw&r=0" alt="Docker" />
+        <span class="card-title">Learn Docker</a>
+      </div>
     </div>
+=======================================================================================================================================================
   </div>
 
   <script src="script.js"></script>
@@ -149,13 +164,47 @@ $</pre>
 
       document.getElementById("main-content").innerHTML = content;
     }
+
+// ✅ New Docker Loader
+  function loadDocker() {
+    const content = `
+      <h1>Docker Basics</h1>
+      <p>Docker is an open platform for developing, shipping, and running applications.</p>
+
+      <h2>Why Docker?</h2>
+      <ul>
+        <li>Lightweight compared to virtual machines</li>
+        <li>Ensures consistency across environments</li>
+        <li>Fast deployment and scaling</li>
+      </ul>
+
+      <h2>Basic Docker Commands</h2>
+      <pre><code>
+# Check Docker version
+docker --version
+
+# Run a simple container
+docker run hello-world
+
+# List running containers
+docker ps
+
+# Stop a container
+docker stop <container_id>
+      </code></pre>
+
+      <p>You can later expand this section with installation steps, container usage, networking, and orchestration.</p>
+    `;
+    document.getElementById("main-content").innerHTML = content;
+  }
+</script>
   </script>
 
   <!-- Footer -->
   <footer style="text-align: center; padding: 20px; margin-top: 40px; background-color: #f5f5f5; font-size: 14px; color: #555;">
     <hr style="margin-bottom: 10px;" />
     <p>&copy; 2025 Naveen | Genesis DBA Documentation Portal</p>
-    <p>Made with ❤️ by <strong>Naveen</strong></p>
+    <p>Made with ❤️ by <strong>NaVi</strong></p>
   </footer>
 
 </body>
