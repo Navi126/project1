@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Linux Docs | Naveen Genesis</title>
+  <title>Docs | Learn techo</title>
   <meta name="viewport" content="width=1024" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -182,10 +182,12 @@ $</pre>
       <pre><code>
 # Check Docker version
 docker --version
+<img src="https://github.com/Navi126/project1/blob/main/Vesion.png?raw=true;" />
+
 
 # Run a simple container
 docker run hello-world
-
+<img src="https://github.com/Navi126/project1/blob/main/2.png?raw=true;" />
 # List running containers
 docker ps
 
@@ -193,7 +195,12 @@ docker ps
 docker stop <container_id>
       </code></pre>
 
-      <p>You can later expand this section with installation steps, container usage, networking, and orchestration.</p>
+      <p><li>Image → Blueprint of your application (like a template).</li>
+         <li>Container → Running instance of an image.</li>
+         <li>Dockerfile → Instructions to build an image.</li>
+         <li>Docker Hub → Public repo of images.</li>
+         <li>docker run → Command to start a container.</li>
+     </p>
     `;
     document.getElementById("main-content").innerHTML = content;
   }
@@ -209,3 +216,119 @@ docker stop <container_id>
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* The popup (hidden by default) */
+    .popup {
+      display: none; 
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      background: #fff;
+      padding: 20px;
+      width: 400px;
+      border-radius: 12px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      animation: fadeIn 0.5s ease;
+    }
+
+    /* Cancel (X) button */
+    .close-btn {
+      position: absolute;
+      top: 10px; right: 15px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #333;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.8);}
+      to {opacity: 1; transform: scale(1);}
+    }
+
+    img {
+      border-radius: 50%;
+      width: 100px;
+      margin-bottom: 10px;
+    }
+
+    .skills {
+      text-align: left;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .skills ul {
+      padding-left: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to My Website</h1>
+  <p>Click anywhere and my profile will pop up automatically.</p>
+
+  <!-- Popup -->
+  <div id="profilePopup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <img src="https://www.litmos.com/wp-content/uploads/2018/10/learning-experience-matters.jpg" alt="My Profile">
+      <h2>I'm Naveen Kandregula</h2>
+      <p><em>Oracle DBA | DevOps Learner</em></p>
+      
+      <p>
+        Passionate IT professional with hands-on experience in 
+        <strong>Database Administration</strong> and exploring modern 
+        <strong>DevOps practices</strong>. Always eager to learn and apply 
+        new technologies in real-world scenarios.
+      </p>
+
+      <div class="skills">
+        <h3>Skills:</h3>
+        <ul>
+          <li>Oracle Database 19c Administration</li>
+          <li>RMAN Backup & Recovery</li>
+          <li>ORACLE APPS </li>
+          <li>Data Guard & Cloning</li>
+          <li>Standby Database Management (Switchover & Failover)</li>
+          <li>DevOps Basics (Docker, Git, CI/CD)</li>
+          <li>Linux Shell Scripting</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Show popup when page loads
+    window.onload = function() {
+      document.getElementById("profilePopup").style.display = "flex";
+    };
+
+    // Close popup
+    function closePopup() {
+      document.getElementById("profilePopup").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
+
