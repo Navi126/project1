@@ -75,7 +75,7 @@
     <p>Setup Linux machines, connect remotely and automate via shell scripts.</p>
 
     <h2>Latest articles</h2>
-=======================================================================================================================================================
+
     <div class="articles-grid">        
       <div class="card">
         <img src="https://tse3.mm.bing.net/th/id/OIP.OvWu4PP_VjTlEYDxXdHbHwHaFj?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Firewall" />
@@ -107,7 +107,7 @@
         <span class="card-title">Learn Docker</a>
       </div>
     </div>
-=======================================================================================================================================================
+
   </div>
 
   <script src="script.js"></script>
@@ -331,4 +331,67 @@ docker stop <container_id>
 
 </body>
 </html>
+/* ==================== Mobile Responsive ==================== */
+@media (max-width: 768px) {
+
+  /* Top navbar adjustments */
+  .top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .top-nav .nav-links {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .top-nav .nav-links a {
+    margin: 5px 10px 5px 0;
+  }
+  .top-nav .search-box {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .top-nav .search-box input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Sidebar + main content stacking */
+  .sidebar, .main-content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* Sidebar sections collapse by default */
+  .sidebar ul {
+    display: none;
+  }
+
+  /* Cards grid - 1 card per row */
+  .articles-grid {
+    display: block;
+  }
+  .card {
+    margin-bottom: 15px;
+  }
+
+  /* Popup scaling */
+  .popup-content {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  /* Make images responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Footer adjustments */
+  footer {
+    font-size: 13px;
+    padding: 15px;
+  }
+}
 
