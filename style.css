@@ -275,7 +275,10 @@ footer {
 
   /* Make images responsive */
   img {
-    max-width: 100%;
+    border-radius: 0;
+    width: 100%; 
+    height: auto;
+    margin-bottom: 10px;
     height: auto;
   }
 
