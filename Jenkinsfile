@@ -10,7 +10,6 @@ pipeline {
 
         stage('Deploy to Nginx') {
             steps {
-                // Copy files directly to Nginx folder
                 sh '''
                 cp -r * /usr/share/nginx/html/
                 '''
