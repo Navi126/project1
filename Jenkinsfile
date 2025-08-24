@@ -11,7 +11,11 @@ pipeline {
         stage('Deploy to Nginx') {
             steps {
                 sh '''
-                cp -r * /usr/share/nginx/html/
+                # Copy all files to Nginx directory
+                sudo cp -r * /usr/share/nginx/html/
+                
+                # Restart Nginx to reflect changes
+                sudo systemctl restart nginx
                 '''
             }
         }
