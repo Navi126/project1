@@ -2,20 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Pull from GitHub') {
             steps {
-                checkout([$class: 'GitSCM',
-                          branches: [[name: '*/main']],
-                          userRemoteConfigs: [[url: 'https://github.com/Navi126/project1.git']]
-                ])
+                git branch: 'main', url: 'https://github.com/Navi126/project1.git'
             }
         }
 
         stage('Deploy to Nginx') {
             steps {
+                // Copy website files to Nginx folder
                 sh '''
-                cp -r * /usr/share/nginx/html/
-                systemctl restart nginx
+                sudo rm -rf /usr/share/nginx/html/*
+                sudo cp -r * /usr/share/nginx/html/
+                sudo systemctl restart nginx
                 '''
             }
         }
