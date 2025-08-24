@@ -14,8 +14,8 @@ pipeline {
             steps {
                 // Copy files to nginx root
                 sh '''
-                sudo cp -r * /usr/share/nginx/html/
-                sudo systemctl restart nginx
+                cp -r * /usr/share/nginx/html/
+                systemctl restart nginx
                 '''
             }
         }
