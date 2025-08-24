@@ -10,12 +10,16 @@ pipeline {
 
         stage('Deploy to Nginx') {
             steps {
-                // Copy website files to Nginx folder
-                sh '''
-                sudo rm -rf /usr/share/nginx/html/*
-                sudo cp -r * /usr/share/nginx/html/
-                sudo systemctl restart nginx
-                '''
+                script {
+                    // Run Nginx container if not running
+                    sh '''
+                    if [ -z "$(docker ps -q -f name=jenkins-nginx)" ]; then
+                        docker run -d --name jenkins-nginx -p 8081:80 -v $PWD:/usr/share/nginx/html:ro nginx:latest
+                    else
+                        docker cp * jenkins-nginx:/usr/share/nginx/html/
+                    fi
+                    '''
+                }
             }
         }
     }
